@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../hooks/useFirebase';
+import useAuth from '../../hooks/useAuth';
+// import useFirebase from '../../hooks/useFirebase';
 import './Login.css';
 
 
@@ -9,7 +10,7 @@ import './Login.css';
 
 const Login = () => {
 
-    const { use, signInUsingGoogle } = useFirebase();
+    const { signInUsingGoogle } = useAuth();
 
     return (
         <div className="login-form">
@@ -22,7 +23,7 @@ const Login = () => {
                     <br />
                     <input type="submit" value="Submit" />
                 </form>
-                <p>new to ema-john? <Link to="/register">Create Account</Link></p>
+                <p>new to amazon? <Link to="/register">Create Account</Link></p>
                 <div>-------or----------</div>
                 <button
                     className="btn-regular"
